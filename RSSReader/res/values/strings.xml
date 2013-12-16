@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RSSReader</string>
+    <string name="menu_rename">Rename feed</string>
+    <string name="menu_delete">Delete feed</string>
+    <string name="menu_drop">Drop feeds</string>
+    <string name="menu_sure">Are you sure?</string>
+</resources>

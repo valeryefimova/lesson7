@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="ifmo.mobdev.rssreader"
+          android:versionCode="1"
+          android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="14"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application android:label="@string/app_name" android:icon="@drawable/ic_launcher">
+        <service android:name="ifmo.mobdev.rssreader.MyIntentService"/>
+        <receiver android:name=".BroadcastReceiver2DB"/>
+            <intent-filter>
+                <action android:name="ifmo.mobdev.rssreader.broadcastreceiver2.RESPONSE"/>
+            </intent-filter>
+        <receiver android:name=".BroadcastReceiver3DB">
+            <intent-filter>
+                <action android:name="startAlarm"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="MyActivity1DB"
+                  android:label="@string/app_name"
+                  android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="MyActivity2DB"
+                  android:label="@string/app_name">
+        </activity>
+        <activity android:name="MyActivity3DB"
+                  android:label="@string/app_name">
+        </activity>
+        <activity android:name="FeedEdit"
+                  android:label="@string/app_name"
+                  android:theme="@android:style/Theme.Dialog">
+        </activity>
+    </application>
+</manifest>
